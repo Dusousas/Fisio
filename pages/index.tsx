@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Ask from "@/components/Ask";
 import Main from "@/components/Main";
 import Services from "@/components/Services";
 
@@ -8,6 +9,8 @@ export default function Home() {
       <Main />
       <About />
       <Services />
+      <Ask />
+      
     </>
   );
 }

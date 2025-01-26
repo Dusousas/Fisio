@@ -25,7 +25,7 @@ const data = [
 
 export default function Line() {
   return (
-    <section className='py-12'>
+    <section className='py-20'>
       <div className='maxW flex flex-col justify-center items-center gap-20 lg:flex-row'>
         {data.map((item, index) => (
           <div key={index} className='flex items-center justify-center gap-4'>

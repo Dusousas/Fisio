@@ -17,7 +17,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+summary {
   font-family: "Roboto", serif;
 }
 
@@ -60,20 +61,57 @@ h5,a {
   overflow: hidden;
 }
 
+.BannerAsk {
+  background-image: url('/askBG.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
 .vertical-text {
-  writing-mode: vertical-rl; /* Alinha o texto verticalmente da direita para a esquerda */
-  transform: rotate(180deg); /* Gira para alinhar de cima para baixo */
-  font-size: 345px; /* Ajuste do tamanho da fonte */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 345px; 
   letter-spacing: 20px;
   font-weight: bolder;
-  text-align: center; /* Centraliza o texto */
- 
+  text-align: center;
 }
 
 .outlined-text {
-  color: transparent; /* Remove o preenchimento do texto */
-  -webkit-text-stroke: 2px #02306d; /* Define a espessura e a cor da borda */
-  font-weight: bolder; /* Opcional: deixa as bordas mais visíveis */
+  color: transparent;
+  -webkit-text-stroke: 2px #02306d; 
+  font-weight: bolder;
   background-color: transparent;
 }
+
+
+/* SUMARY */
+summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+}
+
+summary::before {
+  content: counter(step) ". "; 
+  counter-increment: step; 
+  font-size: 14px;
+  font-weight: bold;
+  color: #011E45; 
+}
+
+details {
+  counter-reset: step; 
+}
+
+details[open] summary::before {
+  color: #E12454; 
+}
+
+details[open] summary {
+  color: #E12454;
+}
+
+
 
