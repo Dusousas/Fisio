@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.maxW {
+  max-width: 1620px;
+  padding: 0 2%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", serif;
+}
+
+p {
+  font-family: "Barlow", serif;
+}
+
+h5,a {
+  font-family: "Jost", serif;
+}
+
+/* BACKGROUNDS */
+.bannerMain {
+  position: relative;
+  background-image: url('/bannerMain.jpg');
+  background-size: cover;
+  background-position:right;
+  height: 90vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bannerMain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3); /* Ajuste a opacidade conforme necessário */
+  z-index: 2;
+}
+
+.bannerDR {
+  position: relative;
+  background-image: url('/doctor-profile-bg.jpg');
+  background-size: cover;
+  background-position: left;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl; /* Alinha o texto verticalmente da direita para a esquerda */
+  transform: rotate(180deg); /* Gira para alinhar de cima para baixo */
+  font-size: 345px; /* Ajuste do tamanho da fonte */
+  letter-spacing: 20px;
+  font-weight: bolder;
+  text-align: center; /* Centraliza o texto */
+ 
+}
+
+.outlined-text {
+  color: transparent; /* Remove o preenchimento do texto */
+  -webkit-text-stroke: 2px #02306d; /* Define a espessura e a cor da borda */
+  font-weight: bolder; /* Opcional: deixa as bordas mais visíveis */
+  background-color: transparent;
+}
+
