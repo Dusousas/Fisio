@@ -30,6 +30,14 @@ h5,a {
   font-family: "Jost", serif;
 }
 
+input {
+  outline: none;
+  border-bottom: 1px solid #011E45; 
+  padding: 4px 4px;
+  width: 50%;
+}
+
+
 /* BACKGROUNDS */
 .bannerMain {
   position: relative;
